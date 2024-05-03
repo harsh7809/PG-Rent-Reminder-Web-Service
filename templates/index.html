@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG FORM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 50%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>PG FORM</h1>
+    <form method='post' action="" >
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td><label for="value1">Phone Number</label></td>
+                <td><input type="text" name="number" id="value1" placeholder="Enter your number" required></td>
+            </tr>
+    
+            <tr>
+                <td><label for="value2">Message</label></td>
+                <td><input type="text" name="message" id="value2" placeholder="Enter your message" required></td>
+            </tr>
+    
+            <tr>
+                <td><label for="value3">Date</label></td>
+                <td><input type="date" name="dates" id="value3" placeholder="Enter date" required></td>
+            </tr>
+    
+            <tr>
+                <td colspan="2"><button type='submit'>Send</button></td>
+            </tr>
+        </table>
+    </form>
+    
+    <a href="/ser">ALL DATA</a>
+
+    <a href="/sms">SMS ALERT</a>
+
+    <a href="/all">ALL SMS ALERT</a>
+</body>
+</html>
